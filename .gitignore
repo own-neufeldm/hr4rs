@@ -3,5 +3,8 @@
 .AppleDouble
 .LSOverride
 
+# rust
+target
+
 # editor
 .vscode
