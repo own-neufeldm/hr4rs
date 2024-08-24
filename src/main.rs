@@ -38,7 +38,7 @@ fn main() {
     let args = Args::parse();
 
     if args.version {
-        println!("v1.0.0");
+        println!(env!("CARGO_PKG_VERSION"));
         return;
     }
 
