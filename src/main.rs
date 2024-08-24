@@ -38,7 +38,7 @@ fn main() {
     let args = Args::parse();
 
     if args.version {
-        println!("Not defined.");
+        println!("v1.0.0");
         return;
     }
 
