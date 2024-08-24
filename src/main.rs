@@ -43,9 +43,15 @@ fn main() {
     }
 
     let mut titles: Vec<String> = Vec::new();
-    if let Some(title_arg) = args.title.as_deref() {
-        let mut title = String::from(title_arg);
-
+    let mut title = args.title.unwrap_or("".to_string());
+    if title.is_empty() {
+        if args.paragraph {
+            titles.push(String::from("BEGIN"));
+            titles.push(String::from("END"));
+        } else {
+            titles.push(title)
+        }
+    } else {
         if args.upper {
             title = title.to_uppercase();
         }
@@ -55,13 +61,6 @@ fn main() {
             titles.push(format!("END {title}"));
         } else {
             titles.push(title)
-        }
-    } else {
-        if args.paragraph {
-            titles.push(String::from("BEGIN"));
-            titles.push(String::from("END"));
-        } else {
-            titles.push(String::from(""))
         }
     }
 
