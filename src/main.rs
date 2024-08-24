@@ -2,34 +2,34 @@ use clap::Parser;
 
 #[derive(Debug, Parser)]
 struct Args {
-    /// An optional title.
+    /// An optional title
     title: Option<String>,
 
-    /// Minimum character length.
+    /// Minimum character length
     #[arg(short, long, default_value_t = 50)]
     length: u32,
 
-    /// Character(s) to use for outer borders.
+    /// Character(s) to use for outer borders
     #[arg(short, long, default_value_t = String::from("//"))]
     border: String,
 
-    /// Character to use for inner fillers.
+    /// Character to use for inner fillers
     #[arg(short, long, default_value_t = String::from("-"))]
     filler: String,
 
-    /// Prepend 'BEGIN' and 'END' before title.
+    /// Prepend 'BEGIN' and 'END' before title
     #[arg(short, long, default_value_t = false)]
     paragraph: bool,
 
-    /// Convert title to uppercase.
+    /// Convert title to uppercase
     #[arg(short, long, default_value_t = false)]
     upper: bool,
 
-    /// Do not print a new-line character at the end.
+    /// Do not print a new-line character at the end
     #[arg(short, long, default_value_t = false)]
     no_newline: bool,
 
-    /// Show version and exit.
+    /// Show version and exit
     #[arg(short, long, default_value_t = false)]
     version: bool,
 }
