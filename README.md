@@ -32,7 +32,7 @@ Use `hr4rs` without arguments to print an untitled horizontal rule:
 ```
 $ hr4rs
 
-# ---------------------------------------------- #
+// -------------------------------------------- //
 ```
 
 Provide border characters and a title to print a comment, e.g. for Java:
